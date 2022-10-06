@@ -4,7 +4,7 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.goodee.dao.ProjectDAO">
 	<select id="select" resultType="projectVO">
-		select img, head, content, link 
+		select img, head, content, upper(link) 'link' 
 		from card_table
 		where category = 1 
 	</select>
