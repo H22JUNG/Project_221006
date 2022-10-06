@@ -12,8 +12,9 @@
             padding: 0;
         }
         .container {
-        	width : 60%;
-            margin: 0 auto;
+        	width : 90%;
+            margin: auto;
+            max-width:1110px;
         	
         }
         header, main, aside {
@@ -36,7 +37,12 @@
             width: 100%;
             background-color: antiquewhite;
         }
-
+		
+		 @media ( max-width: 700px ) {
+           .menuli:not(:nth-child(1)){
+            display: none;
+            }
+        }
 	/* 큰 그림들  */
 	 	#menuul {
             display: flex;
@@ -161,7 +167,7 @@
 	}
 	
 	/*DBList1 반응형*/
-	@media (max-width : 980px) {
+	@media (max-width : 700px) {
 	#first{
 		display : grid;
 		grid-template-columns : 1fr 1fr;
@@ -180,7 +186,7 @@
 		width:100%;
 	}
 	}
-	@media (max-width : 760px) {
+	@media (max-width : 500px) {
 		#first{
 		display : grid;
 		grid-template-columns : 1fr;
