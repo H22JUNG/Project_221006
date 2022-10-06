@@ -12,16 +12,16 @@
             padding: 0;
         }
         .container {
-        	width : 60%;
-            margin: 0 auto;
-        	
+        	width : 90%;
+            margin: auto;
+            max-width: 1110px;
         }
         header, main, aside {
             width: 100%;
             margin: 0 auto;
         }
         header {
-            margin-top: 15px;
+            margin-top: 10px;
             margin-bottom: 10px;
         }
         aside {
