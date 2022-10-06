@@ -12,7 +12,7 @@
             padding: 0;
         }
         header, main, aside {
-            width: 80%;
+            width: 60%;
             margin: 0 auto;
             min-width: 60%;
         }
@@ -24,12 +24,13 @@
           }
         }
         header {
-            background-color: antiquewhite;
             margin-top: 15px;
+            margin-bottom: 10px;
         }
         aside {
             display: flex;
             align-items: center;
+            margin-bottom: 20px;
         }
         aside img {
             margin: 0 10px;
@@ -64,6 +65,7 @@
             background-size: cover;
             text-align: center;
             background-position: center;
+            margin-bottom: 20px;;
         }
         #sec1 > div a {
             text-decoration: none;
@@ -76,6 +78,8 @@
             background: url(https://i.ibb.co/tBJGPD9/xbox.png) no-repeat;
             background-size: cover;
             text-align: left;
+            margin-bottom: 20px;
+            
         }
         #sec2 div {
             max-width: 400px;
@@ -94,6 +98,8 @@
             background-size: cover;
             text-align: left;
             color:#eee;
+			margin-bottom: 20px;
+            
         }
         #sec3 div {
             max-width: 600px;
@@ -122,6 +128,7 @@
 		grid-template-rows : 330px;
 		grid-template-areas : 'item5 item6 item7 item8';
 		gap : 20px;
+		margin-bottom: 20px;
 	}
 	#item {
 		display : flex;
@@ -194,13 +201,11 @@
 	}
 	}
 
-
-
-
-
-
 	/*footer*/
-	.footers{
+.footers{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
     display: flex;
     flex-direction: column;
     background-color: #f2f2f2;
@@ -249,6 +254,26 @@
 .footer-link2 li{
     float: left;
     margin-right: 20px;
+}
+
+@media (max-width :700px){
+    .footer-link1{
+        width: 66%;
+        flex-wrap: wrap;
+    }
+    #footer-inner2,#footer-inner4,#footer-inner6{
+        margin-left: 40px;
+    }
+}
+
+@media (max-width :500px){
+    .footer-link1{
+        width: 50%;
+        flex-wrap: wrap;
+    }
+    #footer-inner2,#footer-inner4,#footer-inner6{
+        margin-left: 0px;
+    }
 }
 	
     </style>
