@@ -9,5 +9,10 @@ import com.goodee.vo.ProjectVO;
 
 @Mapper
 public interface ProjectDAO {
+	// 1번 DB
 	public List<ProjectVO> select();
+	
+	// 2번 DB
+	public List<ProjectVO> selectList2();
+	
 }
