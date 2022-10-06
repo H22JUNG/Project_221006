@@ -48,6 +48,7 @@
             list-style: none;
             padding:15px 10px 10px 10px;
             font-size: 13px;
+            cursor : pointer;
         }
         .menuli:nth-child(1) {
             padding: 12px 20px 0 0;
@@ -213,7 +214,7 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.footers h3{
+.footer-title{
     color: #616161;
     font-size: 14px;
     margin-left: 30px;
@@ -367,7 +368,7 @@
 	<div class="footer-link1">
 	
 	<div id="footer-inner1">
-	<h3>What's New</h3>
+	<h3 class="footer-title">What's New</h3>
 	<ul>
 		<li><a href="${pageContext.request.contextPath}/#">Surface Pro X</a></li>
 		<li><a href="${pageContext.request.contextPath}/#">Surface Laptop 3</a></li>
@@ -377,7 +378,7 @@
 	</ul>
 	</div>
 	<div id="footer-inner2">
-	<h3>Microsoft Store</h3>
+	<h3 class="footer-title">Microsoft Store</h3>
 	<ul>
 		<li><a href="${pageContext.request.contextPath}/#">Account Profile</a></li>
 		<li><a href="${pageContext.request.contextPath}/#">Download Center</a></li>
@@ -387,7 +388,7 @@
 	</ul>
 	</div>
 	<div id="footer-inner3">
-	<h3>Education</h3>
+	<h3 class="footer-title">Education</h3>
 	<ul>
 		<li><a href="${pageContext.request.contextPath}/#">Microsoft in education</a></li>
 		<li><a href="${pageContext.request.contextPath}/#">Office for students</a></li>
@@ -397,7 +398,7 @@
 	</ul>
 	</div>
 	<div id="footer-inner4">
-	<h3>Enterprise</h3>
+	<h3 class="footer-title">Enterprise</h3>
 	<ul>
 		<li><a href="${pageContext.request.contextPath}/#">Azure</a></li>
 		<li><a href="${pageContext.request.contextPath}/#">AppSource</a></li>
@@ -407,7 +408,7 @@
 	</ul>
 	</div>
 	<div id="footer-inner5">
-	<h3>Developer</h3>
+	<h3 class="footer-title">Developer</h3>
 	<ul>
 		<li><a href="${pageContext.request.contextPath}/#">Visual Studio</a></li>
 		<li><a href="${pageContext.request.contextPath}/#">Windows Dev Center</a></li>
@@ -417,7 +418,7 @@
 	</ul>
 	</div>
 	<div id="footer-inner6">
-	<h3>Company</h3>
+	<h3 class="footer-title">Company</h3>
 	<ul>
 		<li><a href="${pageContext.request.contextPath}/#">Careers</a></li>
 		<li><a href="${pageContext.request.contextPath}/#"></a></li>
