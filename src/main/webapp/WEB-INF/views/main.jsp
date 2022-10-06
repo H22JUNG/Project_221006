@@ -11,17 +11,14 @@
             margin: 0;
             padding: 0;
         }
-        header, main, aside {
-            width: 60%;
+        .container {
+        	width : 60%;
             margin: 0 auto;
-            min-width: 60%;
+        	
         }
-        @media ( max-width: 1100px ) {
-            header, main {
-            width: 80%;
+        header, main, aside {
+            width: 100%;
             margin: 0 auto;
-            min-width: 80%;
-          }
         }
         header {
             margin-top: 15px;
@@ -116,20 +113,21 @@
         }
         
 	/* DBList1 css*/
-		#first{
+	#first{
+		width: 100%;
 		display : grid;
-		grid-template-columns : 260px 260px 260px 260px;
-		grid-template-rows : 330px;
+		grid-template-columns : 1fr 1fr 1fr 1fr;
+		grid-template-rows : 100%;
 		grid-template-areas : 'item1 item2 item3 item4';
 		gap : 20px;
 	}
-	#second{
+#second{
 		display : grid;
-		grid-template-columns : 260px 260px 260px 260px;
-		grid-template-rows : 330px;
+		width: 100%;
+		grid-template-columns : 1fr 1fr 1fr 1fr;
+		grid-template-rows : 100%;
 		grid-template-areas : 'item5 item6 item7 item8';
 		gap : 20px;
-		margin-bottom: 20px;
 	}
 	#item {
 		display : flex;
@@ -143,11 +141,11 @@
 		grid-area : item${vo2.id};
 	}
 	#item {
-		width : 260px;
+		width : 100%;
+		margin-bottom: 20px;
 	}
 	#item img {
 		width : 100%;
-		height : 150px;
 		margin-bottom: 20px;
 	}
 	#item a {
@@ -167,14 +165,14 @@
 	#first{
 		display : grid;
 		grid-template-columns : 1fr 1fr;
-		grid-template-rows : 330px 330px;
+		grid-template-rows : 1fr 1fr;
 		grid-template-areas : 'item1 item2''item3 item4';
 		gap : 20px;
 	}
 	#second{
 		display : grid;
 		grid-template-columns : 1fr 1fr;
-		grid-template-rows : 330px 330px;
+		grid-template-rows : 1fr 1fr;
 		grid-template-areas : 'item5 item6''item7 item8';
 		gap : 20px;
 	}
@@ -186,14 +184,14 @@
 		#first{
 		display : grid;
 		grid-template-columns : 1fr;
-		grid-template-rows : 330px 330px 330px 330px;
+		grid-template-rows : 1fr 1fr 1fr 1fr;
 		grid-template-areas : 'item1''item2''item3''item4';
 		gap : 20px;
 	}
 	#second{
 		display : grid;
 		grid-template-columns : 1fr;
-		grid-template-rows : 330px 330px 330px 330px;
+		grid-template-rows : 1fr 1fr 1fr 1fr;
 		grid-template-areas : 'item5''item6''item7''item8';
 		gap : 20px;
 	}
@@ -289,6 +287,7 @@
 </head>
 
 <body>
+<div class="container">
     <header>
          <ul id="menuul">
             <li class="menuli"><a href="#"> <img src="https://i.ibb.co/wwLhz98/logo.png" alt=""></a></li>
@@ -443,5 +442,6 @@
 	</ul>
 	</div>
 	</footer>
+	</div>
 </body>
 </html>
