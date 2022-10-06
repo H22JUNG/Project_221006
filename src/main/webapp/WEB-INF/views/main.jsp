@@ -39,7 +39,75 @@
             background-color: antiquewhite;
         }
 
+	/* 큰 그림들  */
+	 	#menuul {
+            display: flex;
+        }
+        .menuli {
+            list-style: none;
+            padding:15px 10px 10px 10px;
+            font-size: 13px;
+        }
+        .menuli:nth-child(1) {
+            padding: 12px 20px 0 0;
+        }
 
+        header img {
+            width: 110px;
+            padding: 0px;
+        }
+
+        #sec1 {
+            padding-top: 250px;
+            padding-bottom: 50px;
+            background: url(https://i.ibb.co/zGSDGCL/slide1.png) no-repeat;
+            background-size: cover;
+            text-align: center;
+            background-position: center;
+        }
+        #sec1 > div a {
+            text-decoration: none;
+            padding: 12px 20px;
+            background-color: rgb(38,38,38);
+            color:white;
+            font-weight: 900;
+        }
+        #sec2 {
+            background: url(https://i.ibb.co/tBJGPD9/xbox.png) no-repeat;
+            background-size: cover;
+            text-align: left;
+        }
+        #sec2 div {
+            max-width: 400px;
+            height: 300px;
+            padding: 50px 0 0 30px;
+        }
+        #sec2 > div a {
+            text-decoration: none;
+            padding: 12px 20px;
+            background-color: rgb(38,38,38);
+            color:#eee;
+            font-weight: 900;
+        }
+        #sec3 {
+            background: url(https://i.ibb.co/72cgtsz/carbon.jpg) no-repeat;
+            background-size: cover;
+            text-align: left;
+            color:#eee;
+        }
+        #sec3 div {
+            max-width: 600px;
+            height: 260px;
+            padding: 90px 0 0 30px;
+        }
+        #sec3 > div a {
+            text-decoration: none;
+            padding: 12px 20px;
+            color: rgb(38,38,38);
+            background-color:#eee;
+            font-weight: 900;
+        }
+        
 	/* DBList1 css*/
 	#first {
 		width: 100%;
@@ -133,10 +201,25 @@
 
 <body>
     <header>
-        <img src="https://i.ibb.co/wwLhz98/logo.png" alt="">
+         <ul id="menuul">
+            <li class="menuli"><a href="#"> <img src="https://i.ibb.co/wwLhz98/logo.png" alt=""></a></li>
+            <li class="menuli">Office</li>
+            <li class="menuli">Windows</li>
+            <li class="menuli">Surface</li>
+            <li class="menuli">Xbox</li>
+            <li class="menuli">Deal</li>
+            <li class="menuli">Support</li>
+        </ul>
     </header>
     <main>
-        <section>section1</section>
+         <section id="sec1">
+            <div>
+                <h2>Surface Deals</h2>
+                <p>Select Surfaces are on sale now - save while supplies last</p>
+                <br><br>
+                <a href="#">Shop Now</a>
+              </div>
+        </section>
         <section>
         <div id="first">
 			<c:forEach items="${list}" var="vo">
@@ -149,7 +232,15 @@
 			</c:forEach>
 		</div>
         </section>
-        <section>section1</section>
+        <section id="sec2">
+            <div>
+                <h2>Xbox Game Pass Ultimate</h2>
+                <br>
+                <p>Xbox Game Pass Ultimate Xbox Live Gold and over 100 high-quality console and PC games. Play together with friends and discover your next favorite game.</p>
+                <br><br>
+                <a href="#">Join Now</a>
+            </div>
+        </section>
         <section>
         <div id="first">
 			<c:forEach items="${list2}" var="vo2">
@@ -162,7 +253,15 @@
 			</c:forEach>
 		</div>
         </section>
-        <section>section1</section>
+         <section id="sec3">
+            <div>
+                <h2>Commiting To Carbon Negative</h2>
+                <br>
+                <p>Microsoft will be carbon negative by 2030 and by 2050 we will remove all carbon the company has emitted since it was founded in 1975</p>
+                <br><br>
+                <a href="#">Learn More</a>
+            </div>
+        </section>
     </main>
     <aside>
         <p>Follow Microsoft</p>
