@@ -109,9 +109,18 @@
         }
         
 	/* DBList1 css*/
-	#first {
-		width: 100%;
-		display : flex;
+		#first{
+		display : grid;
+		grid-template-columns : 260px 260px 260px 260px;
+		grid-template-rows : 330px;
+		grid-template-areas : 'item1 item2 item3 item4';
+		gap : 20px;
+	}
+	#second{
+		display : grid;
+		grid-template-columns : 260px 260px 260px 260px;
+		grid-template-rows : 330px;
+		grid-template-areas : 'item5 item6 item7 item8';
 		gap : 20px;
 	}
 	#item {
@@ -119,11 +128,17 @@
 		flex-direction : column;
 		gap : 10px;
 	}
+	.item${vo.id} {
+		grid-area : item${vo.id};
+	}
+	.item${vo2.id} {
+		grid-area : item${vo2.id};
+	}
 	#item {
 		width : 260px;
 	}
 	#item img {
-		width : 260px;
+		width : 100%;
 		height : 150px;
 		margin-bottom: 20px;
 	}
@@ -137,6 +152,46 @@
 	}
 	#item h4 {
 		font-size: 17.55px;
+	}
+	
+	/*DBList1 반응형*/
+	@media (max-width : 980px) {
+	#first{
+		display : grid;
+		grid-template-columns : 1fr 1fr;
+		grid-template-rows : 330px 330px;
+		grid-template-areas : 'item1 item2''item3 item4';
+		gap : 20px;
+	}
+	#second{
+		display : grid;
+		grid-template-columns : 1fr 1fr;
+		grid-template-rows : 330px 330px;
+		grid-template-areas : 'item5 item6''item7 item8';
+		gap : 20px;
+	}
+	#item {
+		width:100%;
+	}
+	}
+	@media (max-width : 760px) {
+		#first{
+		display : grid;
+		grid-template-columns : 1fr;
+		grid-template-rows : 330px 330px 330px 330px;
+		grid-template-areas : 'item1''item2''item3''item4';
+		gap : 20px;
+	}
+	#second{
+		display : grid;
+		grid-template-columns : 1fr;
+		grid-template-rows : 330px 330px 330px 330px;
+		grid-template-areas : 'item5''item6''item7''item8';
+		gap : 20px;
+	}
+	#item {
+		width:100%;
+	}
 	}
 
 
@@ -223,7 +278,7 @@
         <section>
         <div id="first">
 			<c:forEach items="${list}" var="vo">
-				<div id="item">
+				<div id="item" class="item${vo.id}">
 				<img alt="" src="${vo.img}">
 				<h4>${vo.head}</h4>
 				<p>${vo.content}</p>
@@ -242,9 +297,9 @@
             </div>
         </section>
         <section>
-        <div id="first">
+        <div id="second">
 			<c:forEach items="${list2}" var="vo2">
-				<div id="item">
+				<div id="item" class="item${vo2.id}">
 				<img alt="" src="${vo2.img}">
 				<h4>${vo2.head}</h4>
 				<p>${vo2.content}</p>
