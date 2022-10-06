@@ -39,6 +39,7 @@
     display: flex;
     flex-direction: row;
     padding-top: 0px;
+    padding : 0 30px;
 }
 #footer-inner1,#footer-inner2,#footer-inner3,#footer-inner4,#footer-inner5{
     display: flex;
@@ -84,6 +85,7 @@
     .footer-link1{
         width: 50%;
         flex-wrap: wrap;
+        padding-left : 0;
     }
     #footer-inner2,#footer-inner4,#footer-inner6{
         margin-left: 0px;
